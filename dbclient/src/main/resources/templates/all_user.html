@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>All Users</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<form class="p-3" action="/logout" method="post">
+    <button class="btn btn-warning" type="submit">Logout</button>
+</form>
+
+<h1>All Users</h1>
+<div th:each="el : ${users}" class="alert alert-info mt-2">
+
+    <p th:text="${el.getEmail()}+' '+${el.getStatus()}">Value</p>
+    <p th:text="${el.getFirstName()}+' '+${el.getLastName()}">Value</p>
+    <p th:text="'BALANCE  '+${el.getBalance()}">Value</p>
+    <a href="/users/update" class="btn btn-success mt-2 mb-5">Update</a>
+    <a href="/users/delete" class="btn btn-warning mt-2 mb-5">Delete</a>
+</div>
+</body>
+</html>

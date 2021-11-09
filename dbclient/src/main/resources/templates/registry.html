@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create New Account</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<form method="post" class="text-center" action="/users/registry">
+    <h2 th:if="${isExist}">
+        <div class="btn btn-warning">
+            <a th:text="'Նշված էլ․ հասցեով օգտատեր արդեն գոյություն ունի'">VALUE</a>
+        </div>
+    </h2>
+
+
+    <br><br>
+    <div class="text-center">
+    <h1 class="h3 mb-3 font-weight-normal">Գրանցվել</h1>
+    <label for="name" class="sr-only">Login</label>
+    <input type="text" id="name" name="name" class="text-center" placeholder="Անուն" required="" autofocus="">
+    <br><br>
+    <label for="surname" class="sr-only">Password</label>
+    <input type="text" id="surname" name="surname" class="text-center" placeholder="Ազգանուն" required="">
+
+    <br><br>
+    <label for="email" class="sr-only">Login</label>
+    <input type="email" id="email" name="email" class="text-center" placeholder="Էլ․ հասցե" required="" autofocus="">
+    <br><br>
+    <label for="password" class="sr-only">Password</label>
+    <input type="password" id="password" name="password" class="text-center" placeholder="Գաղտնաբառ" required="">
+    <br><br>
+    <button class="btn btn-success" type="submit">Ստեղծել</button>
+
+    </div>
+</form>
+</body>
+</html>

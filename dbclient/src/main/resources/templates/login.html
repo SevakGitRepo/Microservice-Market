@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Մուտք</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div>
+
+</div>
+<div class="text-center">
+<h2 th:if="${error}">
+    <div class="btn btn-warning">
+        <a th:text="'Մուտքագրման տվյալները սխալ են'">VALUE</a>
+    </div>
+
+</h2>
+</div>
+<form class="text-center" action="/users/login" method="post">
+    <br><br>
+    <h5 class="text-center">Խնդրում ենք մուտք գործել</h5>
+    <br>
+    <div class="text-center">
+    <label for="username" class="sr-only">Login</label>
+    <input type="text" id="username" name="username" class="text-center" placeholder="Մուտքանուն" required="" autofocus="">
+    <br><br>
+    <label for="password" class="text-center"></label>
+    <input type="password" id="password" class="text-center" name="password" placeholder="Գաղտնաբառ" required="">
+    <br><br>
+
+    <button class="btn btn-success" type="submit">Մուտք</button>
+
+    <br><br>
+
+    <a href="/users/registry" class="btn btn-warning"  >Գրանցվել</a>
+    </div>
+
+</form>
+
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<form method="post" class="text-center" action="/users/delete">
+
+
+
+    <h1 class="h3 mb-3 font-weight-normal">Delete Account</h1>
+    <label for="email" class="sr-only">Login</label>
+    <input type="email" id="email" name="email" class="text-center" placeholder="Name" required="" autofocus="">
+    <br><br>
+
+
+    <button class="btn btn-warning" type="submit">Delete</button>
+
+
+</form>
+</body>
+</html>

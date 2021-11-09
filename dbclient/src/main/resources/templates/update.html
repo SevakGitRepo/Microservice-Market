@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Update</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<form method="post" class="text-center" action="/users/update">
+
+
+    <br><br>
+    <label for="email" class="sr-only">Login</label>
+    <input type="email" id="email" name="email" class="text-center" placeholder="Email" required="" autofocus="">
+    <br><br>
+
+
+    <label for="status" class="sr-only">Password</label>
+    <input type="text" id="status" name="status" class="text-center" value="ACTIVE" placeholder="STATE" required="">
+
+    <br><br>
+
+    <label for="balance" class="sr-only">Password</label>
+    <input type="number" id="balance" name="balance" class="text-center" placeholder="Add Balance" required="">
+    <br><br>
+    <button class="btn btn-success" type="submit">Update</button>
+
+
+</form>
+</body>
+</html>

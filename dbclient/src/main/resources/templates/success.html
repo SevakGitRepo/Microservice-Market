@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Success</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<h1>Congratulation!!!</h1>
+<div class="alert alert-info mt-2">
+    <p th:text="${currentUser.getEmail()}+' '+${currentUser.getStatus()}">Value</p>
+    <p th:text="${currentUser.getFirstName()}+' '+${currentUser.getLastName()}">Value</p>
+    <p th:text="'BALANCE  '+${currentUser.getBalance()}">Value</p>
+</div>
+
+<form class="p-3" action="/logout" method="post">
+    <button class="btn btn-warning" type="submit">Logout</button>
+</form>
+
+<div class="p-3">
+    <a href="/users/success/history" class="btn btn-success mt-2 mb-1">History</a>
+</div>
+
+<div th:if="${admin}" class="p-3">
+<a href="/users/allUser" class="btn btn-success mt-2 mb-5">All User</a>
+</div>
+</body>
+</html>
